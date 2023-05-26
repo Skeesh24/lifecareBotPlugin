@@ -1,0 +1,78 @@
+h2 {
+  font-family: Verdana;
+  font-size: large;
+  color: #000000;
+  margin: 20px;
+}
+
+.offset {
+  margin-left: 40px;
+}
+
+.card-1,
+.card-6 {
+  display: block;
+  width: 100px;
+  height: 150px;
+  margin: 20px;
+  padding: 20px 40px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card-12 {
+  display: block;
+  width: 100px;
+  height: 150px;
+  margin: 20px;
+  padding: 20px 40px;
+  border-radius: 30px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  background-color: #2550e5;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card-1 p,
+.card-6 p,
+.card-12 p {
+  margin: 20px 0;
+  font-family: Verdana;
+  font-weight: 150;
+}
+
+.card-1 .duration,
+.card-6 .duration {
+  font-size: 20px;
+  color: #000000;
+}
+
+.card-1 .price,
+.card-6 .price {
+  font-size: 24px;
+  color: #2550e5;
+}
+
+.card-1 .ratio,
+.card-6 .ratio {
+  font-size: 12px;
+  color: darkgrey;
+}
+
+.card-12 .duration-12 {
+  font-size: 20px;
+  color: darkgrey;
+}
+
+.card-12 .price-12 {
+  font-size: 24px;
+  color: white;
+}
+
+.card-12 .ratio-12 {
+  font-size: 12px;
+  color: darkgrey;
+}
