@@ -9,8 +9,8 @@ tg.MainButton.color = "#2cab37"
 let item = ""
 
 let card_1 = document.getElementsByClassName("card-1")[0]
-let card_6 = document.getElementByClassName("card-6")[0]
-let card_12 = document.getElementByClassName("card-12")[0]
+let card_6 = document.getElementsByClassName("card-6")[0]
+let card_12 = document.getElementsByClassName("card-12")[0]
 
 function chooseSub(sub) {
   if (tg.MainButton.isVisible) {
