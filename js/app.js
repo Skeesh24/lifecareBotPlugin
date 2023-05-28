@@ -1,4 +1,4 @@
-let tg = window.Telegram.WebApp
+let tg = Telegram.WebApp
 
 tg.expand()
 
@@ -24,6 +24,7 @@ function chooseSub(sub) {
 
 card_1.addEventListener("click", () => {
   chooseSub("1")
+  tg.sendData(item)
 })
 
 card_6.addEventListener("click", () => {
