@@ -34,6 +34,6 @@ card_12.addEventListener("click", () => {
   chooseSub("12")
 })
 
-Telegram.WebView.onEvent("mainButtonClicked", () => {
+window.Telegram.WebView.onEvent("mainButtonClicked", () => {
   tg.sendData(item)
 })
