@@ -23,15 +23,15 @@ function chooseSub(sub) {
 }
 
 card_1.addEventListener("click", () => {
-  chooseSub(1)
+  chooseSub("1")
 })
 
 card_6.addEventListener("click", () => {
-  chooseSub(6)
+  chooseSub("6")
 })
 
 card_12.addEventListener("click", () => {
-  chooseSub(12)
+  chooseSub("12")
 })
 
 window.Telegram.WebView.onEvent("mainButtonClicked", () => {
