@@ -24,15 +24,17 @@ function chooseSub(sub) {
 
 card_1.addEventListener("click", () => {
   chooseSub("1")
-  tg.sendData(item)
+  tg.MainButton.setText(item)
 })
 
 card_6.addEventListener("click", () => {
   chooseSub("6")
+  tg.MainButton.setText(item)
 })
 
 card_12.addEventListener("click", () => {
   chooseSub("12")
+  tg.MainButton.setText(item)
 })
 
 Telegram.WebView.onEvent("mainButtonClicked", () => {
