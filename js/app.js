@@ -1,10 +1,10 @@
-let tgrm = Telegram.WebApp
+let tg = Telegram.WebApp
 
-tgrm.expand()
+tg.expand()
 
-tgrm.MainButton.setText("WELCOME")
-// tg.MainButton.textColor = "#FFFFFF"
-// tg.MainButton.color = "#2cab37"
+tg.MainButton.setText("WELCOME")
+tg.MainButton.textColor = "#FFFFFF"
+tg.MainButton.color = "#2cab37"
 
 let item = ""
 
@@ -13,12 +13,12 @@ let card_6 = document.getElementsByClassName("card-6")[0]
 let card_12 = document.getElementsByClassName("card-12")[0]
 
 function chooseSub(sub) {
-  if (tgrm.MainButton.isVisible) {
-    tgrm.MainButton.hide()
+  if (tg.MainButton.isVisible) {
+    tg.MainButton.hide()
   } else {
-    tgrm.MainButton.setText(`U take sub for ${sub} month`)
-    item = sub
-    tgrm.MainButton.show()
+    tg.MainButton.setText(`U take sub for ${sub} month`)
+    tg = sub
+    tg.MainButton.show()
   }
 }
 
@@ -34,6 +34,6 @@ card_12.addEventListener("click", () => {
   chooseSub("12")
 })
 
-window.Telegram.WebView.onEvent("mainButtonClicked", () => {
-  tgrm.sendData(item)
+tg.MainButton.onClick(() => {
+  tg.sendData(item)
 })
