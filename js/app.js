@@ -1,4 +1,4 @@
-let tg = Telegram.WebApp
+let tg = window.Telegram.WebApp
 
 tg.expand()
 
@@ -34,7 +34,7 @@ card_12.addEventListener("click", () => {
   chooseSub("12")
 })
 
-tg.MainButton.onClick(() => {
-  tg.setText("TEST")
+window.Telegram.MainButton.onEvent("mainButtonClicked", () => {
+  tg.MainButton.setText("TEST")
   tg.sendData(item)
 })
