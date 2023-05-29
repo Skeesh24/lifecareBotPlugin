@@ -1,4 +1,4 @@
-let tg = Telegram.WebApp
+let tg = window.Telegram.WebApp
 
 tg.expand()
 
@@ -18,7 +18,7 @@ function chooseSub(sub) {
   } else {
     tg.MainButton.setText(`U take sub for ${sub} month`)
     tg = sub
-    tg.MainButton.show()
+    tg.MainButton.setParams({ is_visible: true })
   }
 }
 
@@ -35,6 +35,6 @@ card_12.addEventListener("click", () => {
 })
 
 tg.MainButton.onClick(() => {
-  tg.setText("JOPA")
+  tg.setText("TEST")
   tg.sendData(item)
 })
