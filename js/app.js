@@ -35,5 +35,6 @@ card_12.addEventListener("click", () => {
 })
 
 tg.MainButton.onClick(() => {
+  tg.setText("JOPA")
   tg.sendData(item)
 })
