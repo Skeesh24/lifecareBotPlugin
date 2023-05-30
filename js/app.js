@@ -2,39 +2,41 @@ let tg = window.Telegram.WebApp
 
 tg.expand()
 
-tg.MainButton.setText("WELCOME")
 tg.MainButton.textColor = "#FFFFFF"
 tg.MainButton.color = "#2cab37"
 
+let btnPressed = false
 let item = ""
 
 let card_1 = document.getElementsByClassName("card-1")[0]
 let card_6 = document.getElementsByClassName("card-6")[0]
 let card_12 = document.getElementsByClassName("card-12")[0]
 
+const onClose = () => console.log(window)
+
 function chooseSub(sub) {
-  if (tg.MainButton.isVisible) {
+  btnPressed = !btnPressed
+  if (btnPressed) {
     tg.MainButton.hide()
   } else {
     tg.MainButton.setText(`U take sub for ${sub} month`)
     tg = sub
-    tg.MainButton.setParams({ is_visible: true })
+    tg.MainButton.show()
   }
 }
 
 card_1.addEventListener("click", () => {
-  chooseSub("1")
+  tg.sendData("1")
 })
 
 card_6.addEventListener("click", () => {
-  chooseSub("6")
+  tg.sendData("6")
 })
 
 card_12.addEventListener("click", () => {
-  chooseSub("12")
+  tg.sendData("12")
 })
 
-window.Telegram.MainButton.onEvent("mainButtonClicked", () => {
+window.Telegram.WebView.onEvent("main_button_pressed", () => {
   tg.MainButton.setText("TEST")
-  tg.sendData(item)
 })
