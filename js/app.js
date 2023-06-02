@@ -22,16 +22,16 @@ function chooseSub(sub) {
         item = 1
         break
       case "xtra":
-        item = 2
+        item = 6
         break
       case "premium":
-        item = 3
+        item = 12
         break
       default:
         break
     }
 
-    tg.MainButton.setText(`U take ${item}} sub`)
+    tg.MainButton.setText(`U take ${item} sub`)
     item = sub
     tg.MainButton.show()
   }
