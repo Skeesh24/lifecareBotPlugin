@@ -15,7 +15,23 @@ function chooseSub(sub) {
   if (tg.MainButton.isVisible) {
     tg.MainButton.hide()
   } else {
-    tg.MainButton.setText(`U take sub for ${sub} month`)
+    item = sub
+
+    switch (sub) {
+      case "standart":
+        item = 1
+        break
+      case "xtra":
+        item = 2
+        break
+      case "premium":
+        item = 3
+        break
+      default:
+        break
+    }
+
+    tg.MainButton.setText(`U take ${item}} sub`)
     item = sub
     tg.MainButton.show()
   }
