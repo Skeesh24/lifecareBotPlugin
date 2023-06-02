@@ -31,7 +31,7 @@ function chooseSub(sub) {
         break
     }
 
-    tg.MainButton.setText(`U take ${item} sub`)
+    tg.MainButton.setText(`U take ${item} months sub`)
     item = sub
     tg.MainButton.show()
   }
